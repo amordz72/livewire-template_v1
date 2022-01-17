@@ -3,21 +3,23 @@
     @section('title')
     | All post
     @endsection
+    <div class="grid">
+        <div class="col-spane-12">
+            col1
+        </div>
+        <div class="col-start-12">
+            <div>
+                data
+            </div>
+
+            <div class="flex justify-evenly"> {{ $posts->links() }}</div>
+        </div>
+
+    </div>
 
 
 
-    <h1 class="bg-red-500 text-center my-5">index</h1>
-    <input type="text" wire:model.lazy='name'><br>
 
-
-    <ul>
-        @foreach ($posts as $post)
-        <li class="bg-gray-300"><span>{{ $post->title }}</span></li>
-        @endforeach
-    </ul>
-    <br>
-
-    <div class="flex justify-evenly"> {{ $posts->links() }}</div>
 
 
 </div>
