@@ -11,13 +11,15 @@ class Index extends Component
 {
       use WithPagination;
 
+public $title="true";
 public $new=true;
 public $all_posts;//
     public function render()
     {
         return view('livewire.post.index', [
             'posts' => Post::paginate(1),
-        ]);
+            'title' => 'All Posts'
+        ])  ;
     }
 
     public function mount()
